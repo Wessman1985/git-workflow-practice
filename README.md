@@ -31,3 +31,7 @@ Christian Wessman
 ## Samarbete
 
 Det här avsnittet har lagts till direkt på GitHub för att öva på git fetch och git pull.
+
+## Rebase
+
+Det här avsnittet har lagts till på main medan en annan feature-branch utvecklas.

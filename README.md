@@ -27,3 +27,7 @@ Christian Wessman
 | `git commit`    | Sparar en commit lokalt            |
 | `git push`      | Skickar commits till GitHub        |
 | `git pull`      | Hämtar och integrerar ändringar    |
+
+## Samarbete
+
+Det här avsnittet har lagts till direkt på GitHub för att öva på git fetch och git pull.

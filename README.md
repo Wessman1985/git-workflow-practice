@@ -1,6 +1,6 @@
 # Git Workflow Practice
 
-Ett övningsprojekt för att lära mig Git och GitHub.
+Ett praktiskt utbildningsprojekt för att utveckla mina kunskaper inom Git och GitHub.
 
 ## Syfte
 

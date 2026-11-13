@@ -35,3 +35,9 @@ Det här avsnittet har lagts till direkt på GitHub för att öva på git fetch 
 ## Rebase
 
 Det här avsnittet har lagts till på main medan en annan feature-branch utvecklas.
+
+## Git stash
+
+Jag arbetar med det här avsnittet, men är inte färdig ännu.
+
+TODO: Lägg till exempel på hur git stash fungerar.

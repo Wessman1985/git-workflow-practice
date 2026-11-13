@@ -45,3 +45,7 @@ TODO: Lägg till exempel på hur git stash fungerar.
 ### Stash pop
 
 Det här är en tillfällig ändring för att testa git stash pop.
+
+## Gemensamma riktlinjer
+
+Alla utvecklare ska arbeta i egna feature-branches och skapa Pull Requests för kodgranskning.

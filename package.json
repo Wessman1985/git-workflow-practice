@@ -4,7 +4,7 @@
   "description": "Ett övningsprojekt där jag lär mig Git, GitHub och professionellt teamarbete.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "npm run build && node --test dist/*.test.js",
     "typecheck": "tsc --noEmit",
     "build": "tsc",
     "lint": "eslint src"

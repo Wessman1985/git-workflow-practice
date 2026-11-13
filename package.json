@@ -7,7 +7,11 @@
     "test": "npm run build && node --test dist/*.test.js",
     "typecheck": "tsc --noEmit",
     "build": "tsc",
-    "lint": "eslint src"
+    "lint": "eslint src",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": "eslint"
   },
   "repository": {
     "type": "git",
@@ -25,6 +29,8 @@
     "@eslint/js": "^10.0.1",
     "@types/node": "^26.6.6",
     "eslint": "^10.14.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^17.6.0",
     "typescript": "^5.9.3",
     "typescript-eslint": "^8.72.2"
   },

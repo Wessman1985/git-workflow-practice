@@ -1,0 +1,31 @@
+{
+  "name": "git-workflow-practice",
+  "version": "1.0.0",
+  "description": "Ett övningsprojekt där jag lär mig Git, GitHub och professionellt teamarbete.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "typecheck": "tsc --noEmit",
+    "build": "tsc",
+    "lint": "eslint src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Wessman1985/git-workflow-practice.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Wessman1985/git-workflow-practice/issues"
+  },
+  "homepage": "https://github.com/Wessman1985/git-workflow-practice#readme",
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^26.6.6",
+    "eslint": "^10.14.0",
+    "typescript": "^5.9.3",
+    "typescript-eslint": "^8.72.2"
+  }
+}

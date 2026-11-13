@@ -41,3 +41,7 @@ Det här avsnittet har lagts till på main medan en annan feature-branch utveckl
 Jag arbetar med det här avsnittet, men är inte färdig ännu.
 
 TODO: Lägg till exempel på hur git stash fungerar.
+
+### Stash pop
+
+Det här är en tillfällig ändring för att testa git stash pop.

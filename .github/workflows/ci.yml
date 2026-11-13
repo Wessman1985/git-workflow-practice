@@ -7,8 +7,12 @@ on:
 
 jobs:
   quality-check:
-    name: Lint, Typecheck and Build
+    name: Node.js ${{ matrix.node-version }} - Quality checks
     runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [22, 24]
 
     steps:
       - name: Checkout repository
@@ -17,7 +21,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v6
         with:
-          node-version: 24
+          node-version: ${{ matrix.node-version }}
           cache: npm
 
       - name: Install dependencies

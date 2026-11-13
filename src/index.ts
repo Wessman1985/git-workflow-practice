@@ -1,6 +1,4 @@
-function add(a: number, b: number): number {
-  return a + b;
-}
+import { add } from "./math.js";
 
 const result = add(5, 10);
 

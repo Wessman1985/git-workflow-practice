@@ -51,6 +51,9 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Fetch semantic-release Git notes
+        run: git fetch origin '+refs/notes/*:refs/notes/*'
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:

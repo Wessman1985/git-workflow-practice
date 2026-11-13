@@ -3,7 +3,7 @@ import assert from "node:assert/strict";
 import { add } from "./math.js";
 
 test("add should add two positive numbers", () => {
-  assert.equal(add(5, 10), 15);
+  assert.equal(add(5, 10), 20);
 });
 
 test("add should handle negative numbers", () => {

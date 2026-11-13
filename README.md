@@ -49,3 +49,9 @@ Det här är en tillfällig ändring för att testa git stash pop.
 ## Gemensamma riktlinjer
 
 Alla utvecklare ska arbeta i egna feature-branches och skapa Pull Requests för kodgranskning.
+
+## Teamarbete
+
+Jag arbetar lokalt med en ny funktion som ännu inte är färdig.
+
+TODO: Dokumentera hur vi hanterar ändringar från andra utvecklare.

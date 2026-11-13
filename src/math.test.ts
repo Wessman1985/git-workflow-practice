@@ -15,25 +15,25 @@ test("add should handle zero", () => {
 })
 
 test("multiply should multiply two positive numbers", () => {
-  assert.equal(multiply(5, 10), 50)
+  assert.equal(multiply({ a: 5, b: 10 }), 50)
 })
 
 test("multiply should handle negative numbers", () => {
-  assert.equal(multiply(-5, 10), -50)
+  assert.equal(multiply({ a: -5, b: 10 }), -50)
 })
 
 test("multiply should handle zero", () => {
-  assert.equal(multiply(0, 10), 0)
+  assert.equal(multiply({ a: 0, b: 10 }), 0)
 })
 
 test("multiply should reject NaN", () => {
-  assert.throws(() => multiply(NaN, 5), RangeError)
+  assert.throws(() => multiply({ a: NaN, b: 5 }), RangeError)
 })
 
 test("multiply should reject Infinity", () => {
-  assert.throws(() => multiply(Infinity, 5), RangeError)
+  assert.throws(() => multiply({ a: Infinity, b: 5 }), RangeError)
 })
 
 test("multiply should reject negative Infinity", () => {
-  assert.throws(() => multiply(5, -Infinity), RangeError)
+  assert.throws(() => multiply({ a: 5, b: -Infinity }), RangeError)
 })

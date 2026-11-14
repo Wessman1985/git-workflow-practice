@@ -41,3 +41,17 @@ export function subtract(a: number, b: number): number {
 
   return a - b
 }
+
+export function power(base: number, exponent: number): number {
+  if (!Number.isFinite(base) || !Number.isFinite(exponent)) {
+    throw new RangeError("Both arguments must be finite numbers")
+  }
+
+  const result = Math.pow(base, exponent)
+
+  if (!Number.isFinite(result)) {
+    throw new RangeError("Result must be a finite number")
+  }
+
+  return result
+}

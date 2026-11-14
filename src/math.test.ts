@@ -69,3 +69,7 @@ test("square should handle negative numbers", () => {
 test("square should handle zero", () => {
   assert.equal(square(0), 0)
 })
+
+test("square should handle decimal numbers", () => {
+  assert.equal(square(1.5), 2.25)
+})

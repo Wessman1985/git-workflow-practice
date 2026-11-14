@@ -109,3 +109,11 @@ test("subtract should reject NaN", () => {
 test("subtract should reject Infinity", () => {
   assert.throws(() => subtract(10, Infinity), RangeError)
 })
+
+test("subtract should reject negative Infinity", () => {
+  assert.throws(() => subtract(10, -Infinity), RangeError)
+})
+
+test("add should reject NaN", () => {
+  assert.throws(() => add(NaN, 5), RangeError)
+})

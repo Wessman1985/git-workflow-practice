@@ -1,6 +1,6 @@
 import test from "node:test"
 import assert from "node:assert/strict"
-import { add, multiply, divide, square, subtract } from "./math.js"
+import { add, multiply, divide, square, subtract, power } from "./math.js"
 
 test("add should add two positive numbers", () => {
   assert.equal(add(5, 10), 15)
@@ -116,4 +116,36 @@ test("subtract should reject negative Infinity", () => {
 
 test("add should reject NaN", () => {
   assert.throws(() => add(NaN, 5), RangeError)
+})
+
+test("power should calculate base raised to a positive exponent", () => {
+  assert.equal(power(2, 3), 8)
+})
+
+test("power should handle zero as exponent", () => {
+  assert.equal(power(5, 0), 1)
+})
+
+test("power should handle negative exponents", () => {
+  assert.equal(power(2, -2), 0.25)
+})
+
+test("power should handle zero as base with positive exponent", () => {
+  assert.equal(power(0, 3), 0)
+})
+
+test("power should reject NaN", () => {
+  assert.throws(() => power(NaN, 2), RangeError)
+})
+
+test("power should reject Infinity", () => {
+  assert.throws(() => power(2, Infinity), RangeError)
+})
+
+test("power should reject zero raised to a negative exponent", () => {
+  assert.throws(() => power(0, -1), RangeError)
+})
+
+test("power should reject negative base with fractional exponent", () => {
+  assert.throws(() => power(-2, 0.5), RangeError)
 })

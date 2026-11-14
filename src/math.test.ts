@@ -1,6 +1,6 @@
 import test from "node:test"
 import assert from "node:assert/strict"
-import { add, multiply } from "./math.js"
+import { add, multiply, divide } from "./math.js"
 
 test("add should add two positive numbers", () => {
   assert.equal(add(5, 10), 15)
@@ -36,4 +36,24 @@ test("multiply should reject Infinity", () => {
 
 test("multiply should reject negative Infinity", () => {
   assert.throws(() => multiply({ a: 5, b: -Infinity }), RangeError)
+})
+
+test("divide should divide two positive numbers", () => {
+  assert.equal(divide({ a: 10, b: 2 }), 5)
+})
+
+test("divide should handle negative numbers", () => {
+  assert.equal(divide({ a: -10, b: 2 }), -5)
+})
+
+test("divide should handle division by zero", () => {
+  assert.throws(() => divide({ a: 10, b: 0 }), RangeError)
+})
+
+test("divide should reject NaN", () => {
+  assert.throws(() => divide({ a: NaN, b: 2 }), RangeError)
+})
+
+test("divide should reject Infinity", () => {
+  assert.throws(() => divide({ a: Infinity, b: 2 }), RangeError)
 })

@@ -9,3 +9,15 @@ export function multiply({ a, b }: { a: number; b: number }): number {
 
   return a * b
 }
+
+export function divide({ a, b }: { a: number; b: number }): number {
+  if (!Number.isFinite(a) || !Number.isFinite(b)) {
+    throw new RangeError("Both arguments must be finite numbers")
+  }
+
+  if (b === 0) {
+    throw new RangeError("Division by zero is not allowed")
+  }
+
+  return a / b
+}

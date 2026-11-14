@@ -23,5 +23,9 @@ export function divide({ a, b }: { a: number; b: number }): number {
 }
 
 export function square(a: number): number {
+  if (!Number.isFinite(a)) {
+    throw new RangeError("Argument must be a finite number")
+  }
+
   return a * a
 }

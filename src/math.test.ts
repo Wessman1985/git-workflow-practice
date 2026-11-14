@@ -73,3 +73,15 @@ test("square should handle zero", () => {
 test("square should handle decimal numbers", () => {
   assert.equal(square(1.5), 2.25)
 })
+
+test("square should reject NaN", () => {
+  assert.throws(() => square(NaN), RangeError)
+})
+
+test("square should reject Infinity", () => {
+  assert.throws(() => square(Infinity), RangeError)
+})
+
+test("square should reject negative Infinity", () => {
+  assert.throws(() => square(-Infinity), RangeError)
+})

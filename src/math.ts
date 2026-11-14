@@ -29,3 +29,11 @@ export function square(a: number): number {
 
   return a * a
 }
+
+export function subtract(a: number, b: number): number {
+  if (!Number.isFinite(a) || !Number.isFinite(b)) {
+    throw new RangeError("Both arguments must be finite numbers")
+  }
+
+  return a - b
+}

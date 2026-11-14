@@ -1,6 +1,6 @@
 import test from "node:test"
 import assert from "node:assert/strict"
-import { add, multiply, divide, square } from "./math.js"
+import { add, multiply, divide, square, subtract } from "./math.js"
 
 test("add should add two positive numbers", () => {
   assert.equal(add(5, 10), 15)
@@ -84,4 +84,28 @@ test("square should reject Infinity", () => {
 
 test("square should reject negative Infinity", () => {
   assert.throws(() => square(-Infinity), RangeError)
+})
+
+test("subtract should subtract two positive numbers", () => {
+  assert.equal(subtract(10, 3), 7)
+})
+
+test("subtract should handle negative results", () => {
+  assert.equal(subtract(3, 10), -7)
+})
+
+test("subtract should handle zero", () => {
+  assert.equal(subtract(10, 0), 10)
+})
+
+test("subtract should handle decimal numbers", () => {
+  assert.ok(Math.abs(subtract(5.5, 2.2) - 3.3) < 1e-10)
+})
+
+test("subtract should reject NaN", () => {
+  assert.throws(() => subtract(NaN, 5), RangeError)
+})
+
+test("subtract should reject Infinity", () => {
+  assert.throws(() => subtract(10, Infinity), RangeError)
 })
